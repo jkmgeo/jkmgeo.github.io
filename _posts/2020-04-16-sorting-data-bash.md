@@ -8,7 +8,8 @@ tags:
     - sort
     - gmt
 ---
-### Intro
+
+## Intro
 
 Recently, I had to make a map in GMT, plotting the locations of various earthquakes, with the plot symbols colored by earthquake focal depth, and symbol size scaled to earthquake magnitude. Then went well, but the data were plotted in the order they were stored in the earthquake catalog file. This meant large earthquakes had large symbols, and plotted atop (and thus obscuring) chronologically earlier smaller earthquakes. But how to sort the data so the largest data were read first? Cue scratching the surface of `awk` and `sort` in my bash shell.
 
@@ -22,9 +23,11 @@ time,latitude,longitude,depth,magnitude,status
 2020-03-02T13:00:00Z,40,93,10,5.0,reviewed
 ```
 
-To plot the data, 4 columns are needed, representing `(x, y, c, s)` or x position, y position, color, and size. This order is specified by GMT's `psxy` plotting function, which I was using to make the map. So, how to extract the `longitude`, `latitude`, `depth`, and `magnitude` columns, and the rows sorted on the `magnitude` column for plotting?
+Note that I assume that you're using `bash` from within the same directory as where your datafile (here, `eq.txt`) is stored. If not, `cd` over there. Any commands here to export an output file (e.g., `> output.txt`) will put the output file in the same directory.
 
-### Using `awk`
+Now, to plot the data, 4 columns are needed, representing `(x, y, c, s)` or x position, y position, color, and size. This order is specified by GMT's `psxy` plotting function, which I was using to make the map. So, how to extract the `longitude`, `latitude`, `depth`, and `magnitude` columns, with the rows sorted on the `magnitude` column for plotting?
+
+## Using `awk`
 
 First, we need to extract the data from the file, so we use `awk`, which is a shell utility. `awk` commands are formatted like: `awk 'action' <file> > <output>`. Here, that means using:
 
@@ -43,7 +46,7 @@ All that extra stuff did two things:
 
 So, we're most of the way there! But we still need to sort the data on `magnitude`.
 
-### Using `sort`
+## Using `sort`
 
 `sort` is another shell utility, like `awk`. Perhaps unsurprisingly, it sorts data. We can combine the output from `awk` into a `sort` command by "piping" (`|`) the `awk` output. Let's do that, and send the sorted output to a text file called `quakes_rsort.txt` so that we can review it and make sure the sorting worked properly.
 
@@ -51,7 +54,7 @@ So, we're most of the way there! But we still need to sort the data on `magnitud
 
 Here, for the lines that aren't the header, the `awk` output is piped into `sort`. This is why `sort -k4 -r -n` is in double quotes, and inside the brackets (`{ }`) of the `awk` command where actions are done. Now, a few notes about `sort` syntax: `-k` is used to specify the field (i.e., column) used to sort on. So, `-k4` sorts on the 4th column. But wait, isn't `magnitude` the **5th** column of our data! Well, yes, but remember that `sort` is taking the piped `awk` output, where we only extracted columns `$3, $2, $4, $5`, so `magnitude` is now actually column 4. I've specified `-n` to tell `sort` that this is numeric data (just to make sure there's no issues like you sometimes find with `ls` about files being named `1.txt`, `10.txt`, `11.txt`, ... `2.txt`, `20.txt`, ...) and, crucially, `-r`. The `-r` tells `sort` to do so in reverse (i.e., descending) fashion.
 
-### Finishing up
+## Finishing up
 
 So, putting it all together (with a modification to take the `sort` output and pipe it straight into `gmt psxy`):
 
