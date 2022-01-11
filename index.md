@@ -1,3 +1,8 @@
+---
+layout : page
+title : jkmgeo
+---
+
 # About
 I am -- in order of decreasing skillfulness -- a dog dad, geologist, and coder.
 
