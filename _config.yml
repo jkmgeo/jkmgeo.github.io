@@ -8,7 +8,7 @@ twitter_username: jmullergeo
 
 header_pages:
 - index.md
-- ./til/index.md
+- til.md
 
 theme: minima
 
