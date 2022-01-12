@@ -16,7 +16,7 @@ I plan to explore building a website in the future, but for now, follow along as
 
 ## 2022-01-11
 
-### lookup data in a pandas DataFrame and add it to another DataFrame
+### pandas: lookup data in a DataFrame and add it to another DataFrame
 
 - context: I had 2 dataframes -- 1 for analysed samples, 1 for external standard reference compositions -- and wanted to get the corresponding compositions for every standard analysed. However, there was only 1 row per standard in the external reference composition dataframe, so I couldn't use `merge`. (I also had to extract the elemental symbol from the isotope column header in the measured dataframe, not shown here.)
 
@@ -51,7 +51,20 @@ df = pd.DataFrame({
     "y": np.arange(10)**2,
     "class": 5*["a"] + 5*["b"]
 })
-plt.scatter(df.x, df.y, c=df["class"].astype('category').cat.codes)
+catClass = df["class"].astype('category') # make categorical
+plt.scatter(df.x, df.y, c=catClass.cat.codes) # plot
+plt.xlabel("x"); plt.ylabel("y") # add axes labels
+
+# make colorbar, w/ ticks at catClass codes and label with category
+plt.colorbar(
+    label="class",
+    ticks=catClass.cat.codes.unique(),
+).ax.set_yticklabels(catClass.cat.categories)
+plt.tight_layout()
 plt.show()
 ```
+
+- result:
+![data colored by category](./_include/colored_cat_data.png)
+
 .
