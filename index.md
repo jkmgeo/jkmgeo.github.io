@@ -20,9 +20,10 @@ I plan to explore building a website in the future, but for now, follow along as
 
 - context: I had 2 dataframes -- 1 for analysed samples, 1 for external standard reference compositions -- and wanted to get the corresponding compositions for every standard analysed. However, there was only 1 row per standard in the external reference composition dataframe, so I couldn't use `merge`. (I also had to extract the elemental symbol from the isotope column header in the measured dataframe, not shown here.)
 
-- CWCD: [map dict values with df col | kanoki.org](https://kanoki.org/2019/04/06/pandas-map-dictionary-values-with-dataframe-columns/)
+- CWCD: [map dict values with df col : kanoki.org](https://kanoki.org/2019/04/06/pandas-map-dictionary-values-with-dataframe-columns/)
 
 - code:
+
 ```python
 # convert Series of elemental compositions of stds to dict
 # map the dict to a new col in the measured data according to each std's ID
@@ -37,9 +38,10 @@ analysed_df[isotope_reference_data] = analysed_df[sample_ID_column].map(
 
 - context: plotting icpms external standard calibration data, I had some measured values that clusted at similar standard compositions, but "noisy" measured intensities. The lack of style differentiation between standards used to define the calibration curve made it hard to tell if these were 2 standards with coincidentally similar compositions, or bad data for a single standard. I didn't need the full power of `seaborn`'s `hue`, so figured I'd just add a little styling from `pandas` & `matplotlib`.
 
-- CWCD: [encoding categorical data | pbpython.com](https://pbpython.com/categorical-encoding.html)
+- CWCD: [encoding categorical data : pbpython.com](https://pbpython.com/categorical-encoding.html)
 
 - code:
+
 ```python
 # get array of numerical codes for categorical data by converting dtype
 # N.B. doesn't permit category-wise labeling in legend
