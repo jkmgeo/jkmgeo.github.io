@@ -1,8 +1,21 @@
-title : jkmgeo
-author :
-  name : James K. Muller
-  email : jkmgeo@protonmail.com
-  github : jkmgeo
-  twitter : jmullergeo
+title: "jkmgeo"
+author: "James K. Muller"
+description: "James Muller's website"
 
-production_url : https://jkmgeo.github.io
+# 
+# SOCIAL NETWORKS
+# 
+# production_url : https://jkmgeo.github.io
+email: "jkmgeo@protonmail.com"
+github_username: "jkmgeo"
+twitter_username: "jmullergeo"
+
+# 
+# STYLING
+# 
+theme: "minima"
+
+plugins:
+  - jekyll-sitemap
+
+# 

@@ -8,65 +8,18 @@ title : jkmgeo
 
 
 # About
-I am -- in order of decreasing skillfulness -- a dog dad, geologist, and coder.
+I am -- in order of decreasing skillfulness -- a dog dad, partner, geoscientist 
+and, among other things, an aspiring coder.
 
 
-I plan to explore building a website in the future, but for now, follow along as I record some useful code snippets for myself in plaintext. (All the better to facilitate "FCP" -- find, copy, paste!) Credit where credit's due ("CWCD") is indicated where appropriate.
-
-
-## 2022-01-11
-
-### pandas: lookup data in a DataFrame and add it to another DataFrame
-
-- context: I had 2 dataframes -- 1 for analysed samples, 1 for external standard reference compositions -- and wanted to get the corresponding compositions for every standard analysed. However, there was only 1 row per standard in the external reference composition dataframe, so I couldn't use `merge`. (I also had to extract the elemental symbol from the isotope column header in the measured dataframe, not shown here.)
-
-- CWCD: [kanoki.org : map dict values with df col](https://kanoki.org/2019/04/06/pandas-map-dictionary-values-with-dataframe-columns/)
-
-- code:
-
-```python
-# convert Series of elemental compositions of stds to dict
-# map the dict to a new col in the measured data according to each std's ID
-# in effect: in measured data, get sample IDs and use these as keys on 
-# which to map std composition values
-analysed_df[isotope_reference_data] = analysed_df[sample_ID_column].map(
-    std_compositions_df[corresponding_element_column].to_dict()
-)
-```
-
-### pandas: encode categorical data | matplotlib: color data by category
-
-- context: plotting icpms external standard calibration data, I had some measured values that clusted at similar standard compositions, but "noisy" measured intensities. The lack of style differentiation between standards used to define the calibration curve made it hard to tell if these were 2 standards with coincidentally similar compositions, or bad data for a single standard. I didn't need the full power of `seaborn`'s `hue`, so figured I'd just add a little styling from `pandas` & `matplotlib`.
-
-- CWCD: [pbpython.com : encode categorical data](https://pbpython.com/categorical-encoding.html)
-
-- code:
-
-```python
-# get array of numerical codes for categorical data by converting dtype
-# N.B. doesn't permit category-wise labeling in legend
-colors = df[categorical_col].astype('category').cat.codes
-
-# example:
-df = pd.DataFrame({
-    "x": np.arange(10),
-    "y": np.arange(10)**2,
-    "class": 5*["a"] + 5*["b"]
-})
-catClass = df["class"].astype('category') # make categorical
-plt.scatter(df.x, df.y, c=catClass.cat.codes) # plot
-plt.xlabel("x"); plt.ylabel("y") # add axes labels
-
-# make colorbar, w/ ticks at catClass codes and label with category
-plt.colorbar(
-    label="class",
-    ticks=catClass.cat.codes.unique(),
-).ax.set_yticklabels(catClass.cat.categories)
-
-plt.tight_layout()
-plt.show()
-```
-
-![data colored by category](/assets/colored_cat_data.png)
-
+Here, I hope to organize a central repository for all things me: code snippets 
+as I "learn in public, daily;" science output; etc. Where I've benefitted from 
+the knowledge of others, expect citing links as appropriate. Speaking of which, 
+the idea for organizing my page like this comes from various places, including 
+[Karl Broman's simple site](https://github.com/kbroman/simple_site); 
+[Chad Baldwin's simple site](https://github.com/chadbaldwin/simple-blog-bootstrap/); 
+[Josh Branchaud's TIL](https://github.com/jbranchaud/til/)
 .
+
+
+*__Welcome!__*
