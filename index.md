@@ -27,6 +27,7 @@ page comes from various places, including:
 
 
 # Navigation
+
 |      __subject__      |
 | :-------------------: |
 | [TIL](./til/index.md) |
