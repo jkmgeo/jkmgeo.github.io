@@ -17,4 +17,4 @@ The following links point to my learning "flash cards" based on category:
 - [Python](./python/index.md)
 
 
-<div align="center">![go back](..)</div>
+<"center">![go back](..)</center>
