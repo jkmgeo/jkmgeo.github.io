@@ -33,7 +33,7 @@ analysed_df[isotope_reference_data] = analysed_df[sample_ID_column].map(
 )
 ```
 
-### task: color data by category in matplotlib
+### pandas: encode categorical data | matplotlib: color data by category
 
 - context: plotting icpms external standard calibration data, I had some measured values that clusted at similar standard compositions, but "noisy" measured intensities. The lack of style differentiation between standards used to define the calibration curve made it hard to tell if these were 2 standards with coincidentally similar compositions, or bad data for a single standard. I didn't need the full power of `seaborn`'s `hue`, so figured I'd just add a little styling from `pandas` & `matplotlib`.
 
@@ -44,5 +44,14 @@ analysed_df[isotope_reference_data] = analysed_df[sample_ID_column].map(
 # get array of numerical codes for categorical data by converting dtype
 # N.B. doesn't permit category-wise labeling in legend
 colors = df[categorical_col].astype('category').cat.codes
+
+# example:
+df = pd.DataFrame({
+    "x": np.arange(10),
+    "y": np.arange(10)**2,
+    "class": 5*["a"] + 5*["b"]
+})
+plt.scatter(df.x, df.y, c=df["class"].astype('category').cat.codes)
+plt.show()
 ```
 .
