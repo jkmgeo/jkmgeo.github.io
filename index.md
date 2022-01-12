@@ -1,8 +1,11 @@
-<!-- optional: Jekyll formatting header -->
 ---
 layout : page
 title : jkmgeo
 ---
+
+
+[//]: # (Jekyll header info is optional; can also comment with `<!-- -->`)
+
 
 # About
 I am -- in order of decreasing skillfulness -- a dog dad, geologist, and coder.
