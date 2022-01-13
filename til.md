@@ -14,7 +14,7 @@ others in the same bind I was sometime previously.
 The following links point to my learning "flash cards" based on category:
 
 
-- [Python](./til/python/index.md)
+- [Python](./til/python.md)
 
 
 <center>![go back](..)</center>
