@@ -51,4 +51,4 @@ analysed_df[isotope_reference_data] = analysed_df[sample_ID_column].map(
 [kanoki.org : map dict values with df col](https://kanoki.org/2019/04/06/pandas-map-dictionary-values-with-dataframe-columns/)
 
 
-![<< go back](..)
+[<< go back](..)
