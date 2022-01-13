@@ -60,4 +60,4 @@ plt.show()
 - [pbpython.com : encode categorical data](https://pbpython.com/categorical-encoding.html)
 
 
-[<< go back](..)
+[<< go back](./index.md)

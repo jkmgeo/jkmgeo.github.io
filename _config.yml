@@ -7,7 +7,7 @@ github_username: jkmgeo
 twitter_username: jmullergeo
 
 header_pages:
-- til.md
+- til/index.md
 
 theme: minima
 

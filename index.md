@@ -26,20 +26,8 @@ page comes from various places, including:
 .
 
 
-<!-- 
-*__Welcome!__*
-
-
-# Navigation
-
-|          __NAVIGATION__         |
-| :-----------------------------: |
-|    [<page>](./<page>/index.md)  |
--->
-
-
-<!-- Ref: `github.com/jekyll/minima` -->
 <!-- ![<< go back](..) -->
+<!-- Ref: `github.com/jekyll/minima` -->
 <!-- Functionality: put blank line between section headers & tables -->
 <!-- Note: Jekyll header is optional -->
 <!-- Style: 2 <cr> btwn end of one section and beginning of another -->
