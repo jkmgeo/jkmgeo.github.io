@@ -26,7 +26,7 @@ page comes from various places, including:
 .
 
 
-<!-- ![<< go back](..) -->
+<!-- [<< go back](..) -->
 <!-- Ref: `github.com/jekyll/minima` -->
 <!-- Functionality: put blank line between section headers & tables -->
 <!-- Note: Jekyll header is optional -->

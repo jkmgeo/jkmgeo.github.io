@@ -13,4 +13,4 @@ by the name of the (primary) library used, and then by description.
 - [pandas: map data values to another dataframe](./pd_map_data_on_df_col.md)
 
 
-![go back](../index.md)
+[<< go back](../index.md)
