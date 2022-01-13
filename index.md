@@ -39,6 +39,7 @@ page comes from various places, including:
 
 
 <!-- Ref: `github.com/jekyll/minima` -->
+<!-- ![<< go back](..) -->
 <!-- Functionality: put blank line between section headers & tables -->
 <!-- Note: Jekyll header is optional -->
 <!-- Style: 2 <cr> btwn end of one section and beginning of another -->

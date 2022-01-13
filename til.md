@@ -17,4 +17,4 @@ The following links point to my learning "flash cards" based on category:
 - [Python](./til/python.md)
 
 
-<center>![go back](..)</center>
+![<< go back](..)
