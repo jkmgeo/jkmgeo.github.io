@@ -9,6 +9,7 @@ twitter_username: jmullergeo
 header_pages:
 - til/index.md
 - recipes/index.md
+- tools4geos/index.md
 
 theme: minima
 
