@@ -11,7 +11,7 @@ Here I (sporadically) maintain a compilation of links to various geoscience reso
 ### Compilations
 - [tools for petrologists](https://www.kaylaiacovino.com/tools-for-petrologists/), compiled by K. Iacovino
 - [MinPet links](https://www.whitman.edu/geology/winter/MinPetLinks.htm), compiled by J. Winter
-- [geologic software](https://www.ndsu.edu/pubweb/~sainieid/software/), compiled by B. Sainie-Eidukat <span-style="color:red"><<unmaintained>></span-style>
+- [geologic software](https://www.ndsu.edu/pubweb/~sainieid/software/), compiled by B. Sainie-Eidukat <span style="color:red"><<unmaintained>></span>
 - [petrology web resources](https://muse.union.edu/hollochk/kurt-hollocher/petrology/web-resources-in-petrology-and-geochemistry/), compiled by K. Hollocher
 
 
@@ -35,4 +35,4 @@ Here I (sporadically) maintain a compilation of links to various geoscience reso
 [<< go back](../index.md)
 
 
-<span-style="color:gray">last updated 2022-10-28</span-style>
+<span style="color:gray">last updated 2022-10-28</span>
