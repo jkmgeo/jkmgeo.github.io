@@ -16,8 +16,9 @@ Here I (sporadically) maintain a compilation of links to various geoscience reso
 
 
 ### Individual resources (may list items duplicated in above compilations)
+- [Advanced Markdown](https://github.com/DavidWells/advanced-markdown/blob/master/README.md), by D. Wells
 - [Perple_X](https://perplex.ethz.ch/), by J. A. D. Connolly
-|-- [now open sourced!](https://github.com/jadconnolly/Perple_X)
+  - [now open sourced!](https://github.com/jadconnolly/Perple_X)
 - [pyWerami and other tools](https://petrol.natur.cuni.cz/~ondro/), by O. Lexa
 - [MAGEMin](https://github.com/ComputationalThermodynamics/MAGEMin), by N. Riel, et al.
 - [Theriak-Domino](https://titan.minpet.unibas.ch/minpet/theriak/theruser.html), by C. de Capitani
@@ -35,4 +36,6 @@ Here I (sporadically) maintain a compilation of links to various geoscience reso
 [<< go back](../index.md)
 
 
-<span style="color:gray">last updated 2022-10-28</span>
+<p align="center">
+  <span style="color:gray">last updated 2022-10-28</span>
+</p>
