@@ -15,6 +15,7 @@ The following links point to my learning "flash cards" based on category:
 
 
 - [Python](./python/index.md)
+- [bash](./bash/index.md)
 
 
 [<< go back](../index.md)
