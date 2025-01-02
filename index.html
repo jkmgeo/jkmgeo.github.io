@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>James K. Muller</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/w3.css">
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <style>
+            body, h1,h2,h3,h4,h5,h6 {
+                font-family: "Noto", sans-serif; 
+                color: rgb(160, 160, 160);
+                line-height: 1.25;
+            }
+            p, ul, ol {
+                font-size: 1.25em;
+                color: rgb(191, 191, 191);
+                /* text-align:left; */
+            }
+            .w3-row-padding img {margin-bottom: 12px}
+            /* Set the width of the sidebar to 120px */
+            .w3-sidebar {width: 150px;background: #222;}
+            /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+            #main {margin-left: 150px}
+            /* Remove margins from "page content" on small screens */
+            @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+            a:link {
+                color: skyblue;
+            }
+        </style>
+        <!-- colors: 160 ; 191 ; 220; 222; ? -->
+    </head>
+
+    <body class="w3-black">
+        <!-- Icon Bar (Sidebar - hidden on small screens) -->
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+          <!-- Avatar image in top left corner -->
+          <img src="assets/jkm-tn438.png" style="width:100%">
+          <!-- HOME -->
+          <a href="#" class="w3-bar-item w3-button w3-black">
+            <i class="fa-solid fa-volcano w3-xxlarge"></i>
+            <p>HOME</p>
+          </a>
+          <!-- ABOUT -->
+          <a href="#about" class="w3-bar-item w3-button w3-hover-black">
+            <i class="fa-solid fa-address-card w3-large"></i>
+            <p>ABOUT</p>
+          </a>
+          <!-- CV -->
+          <a href="#cv" class="w3-bar-item w3-button w3-hover-black">
+            <i class="fa-solid fa-file-lines w3-large"></i>
+            <p>CV</p>
+          </a>
+          <!-- EDUCATION -->
+          <a href="#education" class="w3-bar-item w3-button w3-hover-black">
+            <i class="fa-solid fa-graduation-cap w3-large"></i>
+            <p>EDUCATION</p>
+          </a>
+          <!-- PUBLICATIONS -->
+          <a href="#publications" class="w3-bar-item w3-button w3-hover-black">
+            <i class="fa-solid fa-box-archive w3-large"></i>
+            <p>PUBLICATIONS</p>
+          </a>
+          <!-- CONTACT -->
+          <a href="#contact" class="w3-bar-item w3-button w3-hover-black">
+            <i class="fa-solid fa-address-book w3-large"></i>
+            <p>CONTACT</p>
+          </a>
+        </nav>
+        
+        <!-- Navbar on small screens (Hidden on medium and large screens) -->
+        <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+          <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:20% !important">J. K. MULLER</a>
+            <!-- <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a> -->
+            <a href="#cv" class="w3-bar-item w3-button" style="width:20% !important">CV</a>
+            <a href="#education" class="w3-bar-item w3-button" style="width:20% !important">EDUCATION</a>
+            <a href="#publications" class="w3-bar-item w3-button" style="width:20% !important">PUBLICATIONS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
+          </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="w3-padding-large" id="main">
+            <!-- Header/Home -->
+            <header class="w3-container w3-padding-16 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo w3-text-white"><span class="w3-hide-small">James K. Muller</h1>
+            <!-- <p>PhD Candidate<br>Scripps Institution of Oceanography<br><a href="mailto:jkmuller@ucsd.edu">jkmuller@ucsd.edu</a></p> -->
+            <p class="w3-text-grey">PhD Candidate, Scripps Institution of Oceanography</p>
+            <p class="w3-xlarge w3-text-grey">Geology | Volcanology | Petrology | Geochemistry</p>
+            <img src="assets/jkm-gpe2024.png" alt="it's me!" class="w3-image" width="400" height="320"> <!--w:992/h:1108-->
+            </header>
+        
+            <!-- About Section -->
+            <div class="w3-content w3-text-grey w3-padding-32" id="about">
+                <!-- w3-justify -->
+                <h2 class="w3-text-light-grey"></h2>
+                <hr style="width:400px" class="w3-opacity">
+                <p>
+                    Hi, I'm James. Currently, I'm an Earth Science PhD candidate at <a href="https://scripps.ucsd.edu">Scripps Instition of Oceanography</a> at UC San Diego, working under the direction of <a href="https://emilyjchin.squarespace.com/">Dr. Emily J. Chin</a>.
+                </p>
+                
+                <p>
+                    My research interests are rooted in answering a few basic questions about volcanoes that are, ultimately, motivated by reducing volcanic risk:
+                    <ul>
+                        <li>What melts to form magmas, and what causes this melting?</li>
+                        <li>Why do volcanoes form where they do?</li>
+                        <li>How do volcanoes behave when erupting, and why do they behave that way?</li>
+                    </ul>
+                </p>
+
+                <p>
+                    To tackle these problems, I use a combination of fieldwork (both terrestrial and sea-going*), laboratory analyses, and thermodynamic modeling methods. Lab work examples include scanning electron microscopy and X-ray spectroscopy (SEM-EDS), X-ray fluorescence (XRF), and mass spectrometry (solution nebulized- and laser ablation ICP-MS).
+                </p>
+                <br>
+                <br>
+                *That's me, poking out from an immersion suit aboard <a href="https://www.ocean.washington.edu/story/RV_Thomas_G_Thompson">R/V Thomas G. Thompson</a>! Photo from expedition TN-438 with ROVs <a href="https://ndsf.whoi.edu/jason/">Jason II</a> and Medea to the Mariana Trench.
+            </div>
+
+            <!-- CV -->
+            <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="cv">
+                <h2 class="w3-text-light-grey">CV</h2>
+                <hr style="width:400px" class="w3-opacity">
+                <p>A PDF of my CV is available for <a href="assets/Muller-CV-2501.pdf">download here</a>.
+                    <ul>
+                        <li><b><i>Last update: </i></b>January 2025</li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="w3-content w3-text-grey w3-padding-32" id="education"> <!-- w3-justify -->
+                <h2 class="w3-text-light-grey">Education</h2>
+                <hr style="width:400px" class="w3-opacity">
+                <ul>
+                    <li>PhD Candidate, Scripps Institution of Oceanography, UC San Diego
+                        <!-- <ul>
+                            <li><b><i>Advisor: </i></b>Emily J. Chin</li>
+                        </ul> -->
+                    </li>
+                    <li>A.M. (2019) Harvard University
+                        <!-- <ul>
+                            <li><b><i>Advisor: </i></b>Charles H. Langmuir</li>
+                        </ul> -->
+                    </li>
+                    <li>M.A. (2016) Queens College, City University of New York
+                        <!-- <ul>
+                            <li><b><i>Advisor: </i></b>Marc-Antoine Longpré</li>
+                            <li><b><i>Thesis: </i></b>“Tephrostratigraphy of the AD 1730–1736 Timanfaya eruption, Lanzarote, Canary Islands: Insights to the dynamics of large basaltic fissure eruptions”</li>
+                        </ul> -->
+                    </li>
+                    <li>B.A. (2013) Pomona College
+                        <!-- <ul>
+                            <li><b><i>Advisor: </i></b>Jade Star Lackey</li>
+                            <li><b><i>Thesis: </i></b>"Age and origin of the Malapai Hill Basalt, Joshua Tree National Park, CA, USA"</li>
+                        </ul> -->
+                    </li>
+                    <li>Field camp (2012) Frontier Abroad, University of Canterbury, NZL</li>
+                </ul>
+            </div>
+
+            <!-- Publications -->
+            <div class="w3-content w3-text-grey w3-padding-32" id="publications">
+                <h2 class="w3-text-light-grey">Publications</h2>
+                <hr style="width:400px" class="w3-opacity">
+                <p>My peer-reviewed scientific journal articles are listed here. For other things like abstracts, see either my <a href="#cv">CV</a> or my <a href="https://scholar.google.com/citations?user=jZ58sdoAAAAJ&hl=en&oi=ao">Google Scholar</a> page.</p>
+                <ol>
+                    <li><b>Muller, J.K.</b>, Chin, E.J. (<i>in review</i>) Young, enigmatic lavas from a fossil slab remnant beneath Baja California, Mexico. <i>Geology</i>.</li>
+                    <li>Durkin, K., Castillo, P.R., Straub, S.M., Mallick, S., Saal, A. and <b>Muller, J.K.</b> (<i>in press</i>) Widespread contamination of the Pacific upper mantle during the mid-Cretaceous. <i>Marine Geology</i>, p.107460, <a href="https://doi.org/10.1016/j.margeo.2024.107460">https://doi.org/10.1016/j.margeo.2024.107460</a>.</li>
+                    <li><b>Muller, J.K.</b>, Longpré, M.-A. (2024) Tephra dispersal and composition reveal the explosive onset of a large basaltic fissure eruption: Timanfaya, Lanzarote, 1730–1736 CE. <i>Bulletin of Volcanology</i>, v. 86, n. 38, <a href="https://doi.org/10.1007/s00445-024-01729-5">https://doi.org/10.1007/s00445-024-01729-5</a>.</li>
+                </ol>
+            </div>
+
+            <!-- Contact -->
+            <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="contact">
+                <h2 class="w3-text-light-grey">Contact</h2>
+                <hr style="width:400px" class="w3-opacity">
+                <p>
+                    You can find me in person or online at the following addresses:
+                    <ul>
+                        <li>
+                            <b><i><u>PHYSICAL ADDRESS</u></i></b><br>
+                            James K. Muller<br>
+                            Sverdrup Hall 3139<br>
+                            Scripps Institution of Oceanography<br>
+                            UC San Diego<br>
+                            La Jolla, CA 92093-0212 USA<br>
+                        </li>
+                        <br>
+                        <li>
+                            <b><i><u>MAILING ADDRESS</u></i></b><br>
+                            James K. Muller<br>
+                            7835 Trade St., Suite 100<br>
+                            ATTN: Sverdrup Hall 3139<br>
+                            San Diego, CA 92121 USA<br>
+                        </li>
+                        <br>
+                        <li>
+                            <b><i><u>EMAIL/WEB</u></i></b><br>
+                            - <a href="mailto:jkmuller@ucsd.edu" class="w3-medium">jkmuller@ucsd.edu</a>
+                            <br>
+                            - <a href="https://jkmgeo.github.io" class="w3-medium">jkmgeo.github.io</a>
+                        </li>
+                    </ul>
+                </p>
+            </div>  
+            
+            <!-- (Insititutional) Footer -->
+            <div class="w3-content w3-center w3-text-dark-grey w3-padding-64" id="footer">
+                <hr style="w3-center:width=80%" class="w3-center w3-opacity">
+                    <!-- Scripps Institution of Oceanography | UC San Diego | 9500 Gilman Drive | La Jolla, CA 92093 USA -->
+                    <!-- James K. Muller -->
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-content w3-text-grey w3-xlarge">
+                <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+                <p class="w3-medium w3-text-grey">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-blue">w3.css</a></p>
+            </footer>
+        </div>
+    </body>
+</html>
